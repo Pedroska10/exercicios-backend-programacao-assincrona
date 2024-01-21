@@ -1,5 +1,3 @@
-![](https://i.imgur.com/xG74tOh.png)
-
 # Exercício 02
 
 ## API Pokemon
@@ -19,8 +17,8 @@ Todas as requisições deverão ser assíncronas **aguardando o retorno de cada 
 
 Criaremos apenas dois métodos (verbos **HTTP**) para o mesmo recurso **pokemon** (`http://localhost:8000/pokemon`):
 
--   **GET** para listar os pokemons
--   **GET** com id ou nome para retornar informações de 1 pokemon
+- **GET** para listar os pokemons
+- **GET** com id ou nome para retornar informações de 1 pokemon
 
 Abaixo detalharemos como cada um dos métodos deverão funcionar:
 
@@ -33,10 +31,10 @@ A função `listarPokemons` que utilizaremos já é preparada para a paginação
 **Exemplo:**
 
 ```javascript
-const pokemons = listarPokemons()
+const pokemons = listarPokemons();
 // aqui será listado os 10 pokemons da primeira página.
 
-const pokemons = listarPokemons(3)
+const pokemons = listarPokemons(3);
 // aqui será listado os 10 pokemons da terceira página.
 ```
 
@@ -53,10 +51,10 @@ Agora criaremos um novo método em nova rota **GET** que receba um parâmetro do
 A função `detalharPokemon` já é preparada para receber um argumento com id ou nome nos seguintes formatos:
 
 ```javascript
-const pokemons = detalharPokemon(1)
+const pokemons = detalharPokemon(1);
 // aqui será detalhado as informações do bulbasaur.
 
-const pokemons = detalharPokemon("bulbasaur")
+const pokemons = detalharPokemon("bulbasaur");
 // aqui será detalhado as informações do bulbasaur.
 ```
 
@@ -65,68 +63,68 @@ E nós não precisamos de todas as propriedades. Portanto, selecionaremos alguma
 
 As propriedades selecionadas deverão ser:
 
--   id
--   name
--   height
--   weight
--   base_experience
--   forms
--   abilities
--   species
+- id
+- name
+- height
+- weight
+- base_experience
+- forms
+- abilities
+- species
 
 Sendo assim, como exemplo, ao requisitarmos `http://localhost:8000/pokemon/1/` ou `http://localhost:8000/pokemon/bulbasaur/` na nossa API, deverá ser retornado:
 
 ```json
 {
-    "id": 1,
-    "name": "bulbasaur",
-    "height": 7,
-    "weight": 69,
-    "base_experience": 64,
-    "forms": [
-        {
-            "name": "bulbasaur",
-            "url": "https://pokeapi.co/api/v2/pokemon-form/1/"
-        }
-    ],
-    "abilities": [
-        {
-            "ability": {
-                "name": "overgrow",
-                "url": "https://pokeapi.co/api/v2/ability/65/"
-            },
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "ability": {
-                "name": "chlorophyll",
-                "url": "https://pokeapi.co/api/v2/ability/34/"
-            },
-            "is_hidden": true,
-            "slot": 3
-        }
-    ],
-    "species": {
-        "name": "bulbasaur",
-        "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+  "id": 1,
+  "name": "bulbasaur",
+  "height": 7,
+  "weight": 69,
+  "base_experience": 64,
+  "forms": [
+    {
+      "name": "bulbasaur",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/1/"
     }
+  ],
+  "abilities": [
+    {
+      "ability": {
+        "name": "overgrow",
+        "url": "https://pokeapi.co/api/v2/ability/65/"
+      },
+      "is_hidden": false,
+      "slot": 1
+    },
+    {
+      "ability": {
+        "name": "chlorophyll",
+        "url": "https://pokeapi.co/api/v2/ability/34/"
+      },
+      "is_hidden": true,
+      "slot": 3
+    }
+  ],
+  "species": {
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+  }
 }
 ```
 
 **Observações:**
 
--   É necessário se atentar para o uso do **await** quando uma função utiliza **promises**.
--   Todas as rotas deverão seguir os padrões **REST** o mais fielmente possível.
--   Todas as requisições deverão ser **assíncronas**.
+- É necessário se atentar para o uso do **await** quando uma função utiliza **promises**.
+- Todas as rotas deverão seguir os padrões **REST** o mais fielmente possível.
+- Todas as requisições deverão ser **assíncronas**.
 
 ---
 
 Preencha a checklist para finalizar o exercício:
 
--   [ ] Resolver o exercício
--   [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
+- [ ] Resolver o exercício
+- [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+- [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+- [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
 
 ###### tags: `módulo 2` `exercícios` `lógica` `nodeJS`

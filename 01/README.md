@@ -1,5 +1,3 @@
-![](https://i.imgur.com/xG74tOh.png)
-
 # Exercício 01
 
 ## Cálculo de frete
@@ -20,12 +18,11 @@ Para encontrar o estado através do cep informado, usaremos a função `getState
 
 https://www.npmjs.com/package/utils-playground
 
-
 **Regras para cálculo de frete**
 
--   O valor padrão do frete será de `12%` do valor do produto
--   Para os estados `BA, SE, AL, PE e PB` o valor do frete será de `10%`
--   Para os estados `SP e RJ` o valor do frete será de `15%`
+- O valor padrão do frete será de `12%` do valor do produto
+- Para os estados `BA, SE, AL, PE e PB` o valor do frete será de `10%`
+- Para os estados `SP e RJ` o valor do frete será de `15%`
 
 **Exemplo:**
 
@@ -33,29 +30,29 @@ Caso chamado a rota **GET** `/produtos/1/frete/41256250`, a resposta deverá ser
 
 ```json
 {
-    "produto": {
-        "id": 1,
-        "nome": "Teclado mecânico Keychron K2",
-        "valor": 100000
-    },
-    "estado": "BA",
-    "frete": 10000
+  "produto": {
+    "id": 1,
+    "nome": "Teclado mecânico Keychron K2",
+    "valor": 100000
+  },
+  "estado": "BA",
+  "frete": 10000
 }
 ```
 
 **Observações:**
 
--   É necessário se atentar para o uso do **await** quando uma função utiliza **promises**.
--   Todas as rotas deverão seguir os padrões **REST** o mais fielmente possível.
--   Todas as requisições deverão ser **assíncronas**.
+- É necessário se atentar para o uso do **await** quando uma função utiliza **promises**.
+- Todas as rotas deverão seguir os padrões **REST** o mais fielmente possível.
+- Todas as requisições deverão ser **assíncronas**.
 
 ---
 
 Preencha a checklist para finalizar o exercício:
 
--   [ ] Resolver o exercício
--   [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
+- [ ] Resolver o exercício
+- [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+- [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+- [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
 
 ###### tags: `módulo 2` `exercícios` `lógica` `nodeJS`
